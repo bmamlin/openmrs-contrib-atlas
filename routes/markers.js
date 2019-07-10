@@ -23,6 +23,8 @@ module.exports = function(connection) {
     IF(show_counts, observations, null) as observations, \
     contact,email,notes,data,atlas_version,openmrs_version,distribution,date_created,date_changed,created_by FROM atlas";
 
+    utils.scheduleMails(connection);
+
     /* GET all the markers */
     router.get('/markers', function(req, res, next) {
 
