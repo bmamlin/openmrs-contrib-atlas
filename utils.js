@@ -26,7 +26,7 @@ module.exports = {
         let transporter = nodemailer.createTransport({
             host: process.env.MAIL_HOST,
             port: process.env.MAIL_PORT,
-            secure: process.env.MAIL_AUTH,
+            use_authentication: Boolean(process.env.MAIL_AUTH),
             auth: {
                 user: process.env.MAIL_USER,
                 pass: process.env.MAIL_PASS
@@ -36,7 +36,7 @@ module.exports = {
         schedule.scheduleJob('5 * * * * *', function(){
 
             mailOptions = {
-                from: "saisandeep20000@gmail.com", // sender address
+                from: "'Sai Sandeep' <saisandeep20000@gmail.com>", // sender address
                 to: "sandeep.mutyala@outlook.com", // list of receivers
                 subject: "Hello ✔", // Subject line
                 text: "Hello world?", // plain text body
