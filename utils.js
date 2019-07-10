@@ -36,7 +36,7 @@ module.exports = {
         schedule.scheduleJob('5 * * * * *', function(){
 
             mailOptions = {
-                from: "'Sai Sandeep' <saisandeep20000@gmail.com>", // sender address
+                from: "'OpenMRS ID Dashboard' <id-noreply@openmrs.org>", // sender address
                 to: "sandeep.mutyala@outlook.com", // list of receivers
                 subject: "Hello ✔", // Subject line
                 text: "Hello world?", // plain text body
